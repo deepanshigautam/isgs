@@ -12,6 +12,16 @@ function HeroSection() {
           {/* Animated gradient background */}
           <div className="absolute inset-0 bg-gradient-to-br from-isgs-black via-isgs-dark to-isgs-charcoal opacity-90"></div>
           
+          {/* Background ISGS full form text */}
+          <div className="absolute inset-0 flex items-center justify-center opacity-5">
+            <div className="text-[8vw] md:text-[5vw] font-bold text-isgs-white/20 text-center leading-tight tracking-wider select-none">
+              <div>IMAGINATIVE</div>
+              <div>STRONG</div>
+              <div>GLOBAL</div>
+              <div>SUSTAINABLE</div>
+            </div>
+          </div>
+          
           {/* Floating elements */}
           <div className="absolute top-20 left-10 w-64 h-64 rounded-full bg-isgs-dark opacity-40 blur-3xl animate-pulse"></div>
           <div className="absolute bottom-40 right-10 w-80 h-80 rounded-full bg-isgs-charcoal opacity-30 blur-3xl animate-pulse" style={{animationDelay: '2s'}}></div>
@@ -26,6 +36,16 @@ function HeroSection() {
             <h1 className="text-6xl md:text-8xl font-extrabold text-isgs-white mb-6 tracking-tight transform transition-all duration-700 ease-out animate-fadeInUp">
               ISGS
             </h1>
+          </div>
+          
+          {/* Full form of ISGS with gradient */}
+          <div className="overflow-hidden mb-8">
+            <p className="text-lg md:text-xl font-medium text-isgs-silver animate-fadeIn" style={{animationDelay: '0.2s'}}>
+              <span className="text-blue-300">I</span>maginative 
+              <span className="text-blue-300"> S</span>trong 
+              <span className="text-blue-300"> G</span>lobal 
+              <span className="text-blue-300"> S</span>ustainable
+            </p>
           </div>
           
           {/* Tagline with gradient text */}
@@ -59,14 +79,12 @@ function HeroSection() {
               <span>Request a Service</span>
             </button>
           </div>
-          
-         
         </div>
         
         {/* Enhanced gradient overlay */}
         <div className="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-isgs-black via-isgs-black/90 to-transparent"></div>
       </div>
-
+      
       {/* Introduction Section - with hover effects */}
       <div className="py-28 px-4 relative overflow-hidden">
         {/* Background decorative elements */}
@@ -120,13 +138,13 @@ function HeroSection() {
                 <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-blue-500 to-blue-300"></div>
                 <div className="absolute top-0 right-0 w-1 h-full bg-gradient-to-b from-blue-500 to-transparent"></div>
                 
-                <Image
-                  src="/images/digital-learning.jpg" // Replace with actual image
+                {/* <Image
+                  src=" " 
                   alt="Students using laptops in a digital learning environment"
                   width={650}
                   height={450}
                   className="w-full h-auto"
-                />
+                /> */}
                 
                 {/* Caption */}
                 <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-isgs-black to-transparent p-6">
@@ -168,13 +186,13 @@ function HeroSection() {
                 
                 <div className="p-5">
                   <div className="aspect-w-16 aspect-h-9 w-full rounded-md overflow-hidden">
-                    <Image
-                      src="/images/qodee-screenshot.jpg" // Replace with actual screenshot
+                    {/* <Image
+                      src=" " 
                       alt="Qodee coding platform interface"
                       width={800}
                       height={450}
                       className="w-full h-full object-cover"
-                    />
+                    /> */}
                   </div>
                 </div>
                 
