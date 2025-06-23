@@ -1,5 +1,4 @@
 "use client";
-import Footer from '@/components/Footer';
 import Contact from '@/components/Contact';
 
 export default function AboutPage() {
@@ -7,7 +6,7 @@ export default function AboutPage() {
     <>
    
       <Contact />
-      <Footer />
+    
     </>
   );
 }
