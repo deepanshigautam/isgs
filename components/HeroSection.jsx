@@ -21,12 +21,34 @@ function HeroSection() {
 
   // Trigger animations when sections come into view
   useEffect(() => {
-    if (introInView) controlsIntro.start("visible");
-    if (productInView) controlsProduct.start("visible");
-    if (missionInView) controlsMission.start("visible");
-    if (valuesInView) controlsValues.start("visible");
-    if (ctaInView) controlsCTA.start("visible");
-  }, [introInView, productInView, missionInView, valuesInView, ctaInView]);
+    if (introInView) {
+      controlsIntro.start("visible");
+    }
+  }, [introInView, controlsIntro]);
+
+  useEffect(() => {
+    if (productInView) {
+      controlsProduct.start("visible");
+    }
+  }, [productInView, controlsProduct]);
+
+  useEffect(() => {
+    if (missionInView) {
+      controlsMission.start("visible");
+    }
+  }, [missionInView, controlsMission]);
+
+  useEffect(() => {
+    if (valuesInView) {
+      controlsValues.start("visible");
+    }
+  }, [valuesInView, controlsValues]);
+
+  useEffect(() => {
+    if (ctaInView) {
+      controlsCTA.start("visible");
+    }
+  }, [ctaInView, controlsCTA]);
 
   // Animation variants for different elements
   const fadeIn = {
@@ -56,7 +78,7 @@ function HeroSection() {
   };
 
   return (
-    <div className="bg-isgs-black">
+    <div className="bg-isgs-black overflow-hidden w-full">
       {/* Main Hero Section - with parallax effect */}
       <div className="relative w-full min-h-screen flex items-center justify-center px-4 overflow-hidden">
         {/* Dynamic background elements */}
@@ -100,40 +122,42 @@ function HeroSection() {
             </div>
           </motion.div>
           
-          {/* Floating elements */}
-          <motion.div 
-            animate={{ 
-              scale: [1, 1.1, 1],
-              opacity: [0.3, 0.5, 0.3]
-            }}
-            transition={{ 
-              duration: 8, 
-              repeat: Infinity,
-              repeatType: "reverse" 
-            }}
-            className="absolute top-20 left-10 w-64 h-64 rounded-full bg-isgs-dark blur-3xl"
-          ></motion.div>
-          
-          <motion.div 
-            animate={{ 
-              scale: [1, 1.15, 1],
-              opacity: [0.2, 0.4, 0.2]
-            }}
-            transition={{ 
-              duration: 10, 
-              delay: 2,
-              repeat: Infinity,
-              repeatType: "reverse" 
-            }}
-            className="absolute bottom-40 right-10 w-80 h-80 rounded-full bg-isgs-charcoal blur-3xl"
-          ></motion.div>
+          {/* Floating elements - Contained to prevent overflow */}
+          <div className="absolute inset-0 overflow-hidden">
+            <motion.div 
+              animate={{ 
+                scale: [1, 1.1, 1],
+                opacity: [0.3, 0.5, 0.3]
+              }}
+              transition={{ 
+                duration: 8, 
+                repeat: Infinity,
+                repeatType: "reverse" 
+              }}
+              className="absolute top-20 left-10 w-64 h-64 rounded-full bg-isgs-dark blur-3xl"
+            ></motion.div>
+            
+            <motion.div 
+              animate={{ 
+                scale: [1, 1.15, 1],
+                opacity: [0.2, 0.4, 0.2]
+              }}
+              transition={{ 
+                duration: 10, 
+                delay: 2,
+                repeat: Infinity,
+                repeatType: "reverse" 
+              }}
+              className="absolute bottom-40 right-10 w-80 h-80 rounded-full bg-isgs-charcoal blur-3xl"
+            ></motion.div>
+          </div>
           
           {/* Grid pattern overlay */}
           <motion.div 
             initial={{ opacity: 0 }}
             animate={{ opacity: 0.1 }}
             transition={{ duration: 2 }}
-            className="absolute inset-0 bg-[url('/images/grid-pattern.png')]"
+            className="absolute inset-0 bg-[url('/images/grid-pattern.png')] bg-center"
           ></motion.div>
         </div>
         
@@ -141,7 +165,7 @@ function HeroSection() {
           initial="hidden"
           animate="visible"
           variants={staggerContainer}
-          className="relative max-w-4xl text-center z-10"
+          className="relative max-w-4xl text-center z-10 px-4"
         >
           {/* Animated reveal for heading */}
           <motion.div 
@@ -241,7 +265,7 @@ function HeroSection() {
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 2, duration: 1 }}
-            className="absolute -bottom-20 left-1/2 -translate-x-1/2"
+            className="absolute -bottom-20 left-1/2 transform -translate-x-1/2 w-auto"
           >
             <motion.div 
               animate={{ y: [0, 10, 0] }}
@@ -268,24 +292,26 @@ function HeroSection() {
         variants={fadeIn}
         className="py-28 px-4 relative overflow-hidden"
       >
-        {/* Background decorative elements */}
-        <motion.div 
-          animate={{ 
-            scale: [1, 1.1, 1],
-            opacity: [0.15, 0.2, 0.15]
-          }}
-          transition={{ duration: 10, repeat: Infinity }}
-          className="absolute top-0 right-0 w-96 h-96 bg-isgs-dark rounded-full blur-3xl -translate-y-1/2 translate-x-1/3"
-        ></motion.div>
-        
-        <motion.div 
-          animate={{ 
-            scale: [1, 1.15, 1],
-            opacity: [0.15, 0.2, 0.15]
-          }}
-          transition={{ duration: 12, repeat: Infinity }}
-          className="absolute bottom-0 left-0 w-64 h-64 bg-isgs-charcoal rounded-full blur-3xl translate-y-1/3 -translate-x-1/4"
-        ></motion.div>
+        {/* Background decorative elements - Fixed to avoid overflow */}
+        <div className="absolute inset-0 overflow-hidden">
+          <motion.div 
+            animate={{ 
+              scale: [1, 1.1, 1],
+              opacity: [0.15, 0.2, 0.15]
+            }}
+            transition={{ duration: 10, repeat: Infinity }}
+            className="absolute top-0 right-0 w-96 h-96 bg-isgs-dark rounded-full blur-3xl -translate-y-1/2 translate-x-1/3"
+          ></motion.div>
+          
+          <motion.div 
+            animate={{ 
+              scale: [1, 1.15, 1],
+              opacity: [0.15, 0.2, 0.15]
+            }}
+            transition={{ duration: 12, repeat: Infinity }}
+            className="absolute bottom-0 left-0 w-64 h-64 bg-isgs-charcoal rounded-full blur-3xl translate-y-1/3 -translate-x-1/4"
+          ></motion.div>
+        </div>
         
         <div className="max-w-6xl mx-auto relative">
           <motion.div 
@@ -372,7 +398,7 @@ function HeroSection() {
             {/* Visual with enhanced styling */}
             <motion.div 
               variants={fadeInUp}
-              className="md:w-1/2 relative"
+              className="md:w-1/2 relative w-full"
             >
               <motion.div 
                 animate={{ 
@@ -390,7 +416,7 @@ function HeroSection() {
                   boxShadow: "0 20px 40px rgba(0, 0, 0, 0.3)"
                 }}
                 transition={{ type: "spring", stiffness: 200 }}
-                className="relative z-10 rounded-2xl overflow-hidden shadow-2xl"
+                className="relative z-10 rounded-2xl overflow-hidden shadow-2xl w-full aspect-video bg-isgs-black/50"
               >
                 {/* Decorative elements */}
                 <motion.div 
@@ -420,23 +446,25 @@ function HeroSection() {
                 </div>
               </motion.div>
               
-              {/* Decorative dots */}
-              <motion.div 
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ delay: 1.5, duration: 1 }}
-                className="absolute -bottom-12 -right-12 grid grid-cols-4 gap-2"
-              >
-                {[...Array(16)].map((_, i) => (
-                  <motion.div 
-                    key={i}
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    transition={{ delay: 1.5 + (i * 0.05) }}
-                    className="w-2 h-2 rounded-full bg-isgs-charcoal"
-                  ></motion.div>
-                ))}
-              </motion.div>
+              {/* Decorative dots - Contained to prevent overflow */}
+              <div className="absolute bottom-0 right-0 max-w-full overflow-hidden">
+                <motion.div 
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ delay: 1.5, duration: 1 }}
+                  className="relative -bottom-8 -right-8 grid grid-cols-4 gap-2 w-auto h-auto"
+                >
+                  {[...Array(16)].map((_, i) => (
+                    <motion.div 
+                      key={i}
+                      initial={{ opacity: 0 }}
+                      animate={{ opacity: 1 }}
+                      transition={{ delay: 1.5 + (i * 0.05) }}
+                      className="w-2 h-2 rounded-full bg-isgs-charcoal"
+                    ></motion.div>
+                  ))}
+                </motion.div>
+              </div>
             </motion.div>
           </motion.div>
         </div>
@@ -448,7 +476,7 @@ function HeroSection() {
         initial="hidden"
         animate={controlsProduct}
         variants={fadeIn}
-        className="py-28 px-4 bg-gradient-to-b from-isgs-dark to-isgs-black relative"
+        className="py-28 px-4 bg-gradient-to-b from-isgs-dark to-isgs-black relative overflow-hidden"
       >
         {/* Decorative lines */}
         <div className="absolute inset-0">
@@ -605,7 +633,7 @@ function HeroSection() {
         initial="hidden"
         animate={controlsMission}
         variants={fadeIn}
-        className="py-28 px-4 relative"
+        className="py-28 px-4 relative overflow-hidden"
       >
         {/* Decorative background */}
         <div className="absolute top-10 left-0 w-full h-full">
@@ -720,7 +748,7 @@ function HeroSection() {
         initial="hidden"
         animate={controlsValues}
         variants={fadeIn}
-        className="py-28 px-4 bg-gradient-to-b from-isgs-black to-isgs-dark relative"
+        className="py-28 px-4 bg-gradient-to-b from-isgs-black to-isgs-dark relative overflow-hidden"
       >
         {/* Decorative dots */}
         <motion.div 

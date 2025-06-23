@@ -4,6 +4,29 @@
 /* Tailwind Directives */
 @import "tailwindcss";
 
+/* Hide scrollbars */
+::-webkit-scrollbar {
+  display: none !important;
+  width: 0 !important;
+  height: 0 !important;
+}
+
+html, body, div, main, section {
+  -ms-overflow-style: none !important;  /* IE and Edge */
+  scrollbar-width: none !important;  /* Firefox */
+}
+
+html, body {
+  overflow-x: hidden !important;
+  margin: 0;
+  padding: 0;
+}
+
+#__next, [data-nextjs-scroll-focus-boundary] {
+  display: contents;
+  overflow: hidden !important;
+}
+
 /* Inline Theme Definition */
 @theme inline {
   --color-isgs-black: #121212;
