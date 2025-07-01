@@ -44,6 +44,9 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className="scroll-smooth">
+       <head>
+        <link rel="icon" href="/assets/isgs_logo.png" type="image/png" />
+      </head>
       <body
         className={`${jakartaSans.variable} ${geistMono.variable} antialiased`}
       >

@@ -303,7 +303,7 @@ export default function About() {
                     <div className="relative w-56 h-56 rounded-full overflow-hidden border-2 border-isgs-charcoal">
                       {/* Director image */}
                       <Image
-                        src="/assets/anumika.jpg"
+                        src="/assets/anumika_new.png"
                         alt="Mrs. Anumika Kumari"
                         fill
                         className="object-cover"
@@ -352,8 +352,8 @@ export default function About() {
                     </div>
 
                     <div>
-                      <p className="text-isgs-smoke text-sm mb-1">CIN (if available)</p>
-                      <p className="text-isgs-white font-medium">[Insert Here]</p>
+                      <p className="text-isgs-smoke text-sm mb-1">CIN </p>
+                      <p className="text-isgs-white font-medium">U62013UP2025PTC226481</p>
                     </div>
                   </div>
 
@@ -365,12 +365,12 @@ export default function About() {
 
                     <div>
                       <p className="text-isgs-smoke text-sm mb-1">Directors</p>
-                      <p className="text-isgs-white font-medium">Ms. Anshu Jindal & Ms. Anumika Kumari</p>
+                      <p className="text-isgs-white font-medium">Mrs. Anshu Jindal & Mrs. Anumika Kumari</p>
                     </div>
 
                     <div>
                       <p className="text-isgs-smoke text-sm mb-1">Address</p>
-                      <p className="text-isgs-white font-medium">677, Prahalab Vatika, Budhana Gate, Meerut</p>
+                      <p className="text-isgs-white font-medium">677, Prahalad Vatika, Budhana Gate, Meerut</p>
                     </div>
                   </div>
                 </div>

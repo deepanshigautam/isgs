@@ -5,6 +5,7 @@ import Image from 'next/image';
 import { useRouter } from 'next/navigation';
 import { usePathname } from 'next/navigation';
 import { motion, AnimatePresence } from 'framer-motion';
+import isgs from '../public/assets/isgs_logo.png'; 
 
 function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -109,8 +110,8 @@ function Header() {
                 ></motion.div>
                 
                 {/* Logo at center */}
-                <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-10 h-10 bg-gradient-to-br from-blue-500 to-blue-600 rounded-full flex items-center justify-center shadow-lg">
-                  <span className="text-white font-bold text-sm">IS</span>
+                <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-12 h-12  rounded-full flex items-center justify-center shadow-lg">
+                 <Image src={isgs} alt='isgs logo'/>
                 </div>
               </div>
               
@@ -173,9 +174,10 @@ function Header() {
             <div className="flex-shrink-0">
               <Link href="/" onClick={(e) => { e.preventDefault(); handleNavigation('/'); }} className="group flex items-center cursor-pointer">
                 <div className="relative mr-2">
-                  <div className="absolute inset-0 bg-blue-500/30 rounded-full blur-sm transform group-hover:scale-110 transition-transform duration-300"></div>
-                  <div className="relative w-8 h-8 bg-gradient-to-br from-blue-400 to-blue-600 rounded-full flex items-center justify-center">
-                    <span className="text-white font-bold text-xs">IS</span>
+                 
+                  <div className="relative w-10 h-10  rounded-full flex items-center justify-center">
+                    <Image src={isgs}
+                    alt='isgs logo'/>
                   </div>
                 </div>
                 <div className="flex flex-col">

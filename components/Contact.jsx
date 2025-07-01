@@ -9,7 +9,7 @@ function Contact() {
     organization: '',
     message: ''
   });
-  
+
   const [formStatus, setFormStatus] = useState({
     submitted: false,
     success: false,
@@ -25,13 +25,13 @@ function Contact() {
     e.preventDefault();
     // Here you would normally send the data to your backend
     // For now, we'll just simulate a successful submission
-    
+
     setFormStatus({
       submitted: true,
       success: true,
       message: "Thank you for your message! We'll respond within 24 hours."
     });
-    
+
     // Reset form after submission
     setFormData({
       name: '',
@@ -44,7 +44,7 @@ function Contact() {
   return (
     <div id='contact' className="min-h-screen bg-isgs-black pt-24 pb-16">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        
+
         {/* Header */}
         <div className="text-center mb-16">
           <div className="text-isgs-white text-2xl mb-4">📬</div>
@@ -71,14 +71,14 @@ function Contact() {
 
         <div className="max-w-6xl mx-auto">
           <div className="flex flex-col lg:flex-row gap-12">
-            
+
             {/* Contact Form */}
             <div className="lg:w-3/5">
               <div className="flex items-center mb-6">
                 <span className="text-isgs-white mr-3 text-xl">📝</span>
                 <h3 className="text-xl md:text-2xl font-semibold text-isgs-white">Contact Form</h3>
               </div>
-              
+
               <div className="bg-isgs-dark p-6 md:p-8 rounded-lg">
                 {formStatus.submitted && formStatus.success ? (
                   <div className="bg-green-900/20 border border-green-700 rounded-lg p-4 mb-6">
@@ -88,7 +88,7 @@ function Contact() {
                   <form onSubmit={handleSubmit}>
                     <div className="mb-6">
                       <label htmlFor="name" className="block text-isgs-smoke mb-2">Name (Required)</label>
-                      <input 
+                      <input
                         type="text"
                         id="name"
                         name="name"
@@ -98,10 +98,10 @@ function Contact() {
                         required
                       />
                     </div>
-                    
+
                     <div className="mb-6">
                       <label htmlFor="email" className="block text-isgs-smoke mb-2">Email (Required)</label>
-                      <input 
+                      <input
                         type="email"
                         id="email"
                         name="email"
@@ -111,10 +111,10 @@ function Contact() {
                         required
                       />
                     </div>
-                    
+
                     <div className="mb-6">
                       <label htmlFor="organization" className="block text-isgs-smoke mb-2">Organization (Optional)</label>
-                      <input 
+                      <input
                         type="text"
                         id="organization"
                         name="organization"
@@ -123,10 +123,10 @@ function Contact() {
                         className="w-full px-4 py-3 rounded-md bg-isgs-charcoal border border-isgs-graphite text-isgs-white focus:outline-none focus:ring-2 focus:ring-isgs-smoke"
                       />
                     </div>
-                    
+
                     <div className="mb-8">
                       <label htmlFor="message" className="block text-isgs-smoke mb-2">Message (Required)</label>
-                      <textarea 
+                      <textarea
                         id="message"
                         name="message"
                         value={formData.message}
@@ -136,9 +136,9 @@ function Contact() {
                         required
                       ></textarea>
                     </div>
-                    
+
                     <div>
-                      <button 
+                      <button
                         type="submit"
                         className="w-full py-3 bg-isgs-white text-isgs-black font-medium rounded-md hover:bg-isgs-smoke transition-colors duration-300"
                       >
@@ -149,7 +149,7 @@ function Contact() {
                 )}
               </div>
             </div>
-            
+
             {/* Contact Information */}
             <div className="lg:w-2/5">
               {/* Company Contact Information */}
@@ -158,7 +158,7 @@ function Contact() {
                   <span className="text-isgs-white mr-3 text-xl">📍</span>
                   <h3 className="text-xl md:text-2xl font-semibold text-isgs-white">Company Contact Information</h3>
                 </div>
-                
+
                 <div className="bg-isgs-dark p-6 rounded-lg">
                   <div className="flex items-start mb-6">
                     <span className="text-isgs-white mr-4 mt-1">📧</span>
@@ -169,7 +169,7 @@ function Contact() {
                       </a>
                     </div>
                   </div>
-                  
+
                   <div className="flex items-start mb-6">
                     <span className="text-isgs-white mr-4 mt-1">📞</span>
                     <div>
@@ -179,50 +179,60 @@ function Contact() {
                       </a>
                     </div>
                   </div>
-                  
+
                   <div className="flex items-start">
                     <span className="text-isgs-white mr-4 mt-1">🏢</span>
                     <div>
                       <h4 className="text-lg font-medium text-isgs-white mb-1">Address</h4>
                       <p className="text-isgs-silver">
-                        677, Prahalab Vatika, Budhana Gate, Meerut, Uttar Pradesh, India
+                        677, Prahalad Vatika, Budhana Gate, Meerut, Uttar Pradesh, India
                       </p>
                     </div>
                   </div>
                 </div>
               </div>
-              
+
               {/* Social Media */}
               <div>
                 <div className="flex items-center mb-6">
                   <span className="text-isgs-white mr-3 text-xl">🌐</span>
                   <h3 className="text-xl md:text-2xl font-semibold text-isgs-white">Follow Us Online</h3>
                 </div>
-                
+
                 <div className="bg-isgs-dark p-6 rounded-lg">
                   <div className="flex items-center gap-6 mb-4">
-                    <div className="w-10 h-10 rounded-full bg-isgs-charcoal flex items-center justify-center">
-                      <FaInstagram className="text-isgs-smoke" />
-                    </div>
-                    <p className="text-isgs-silver">Instagram: coming soon</p>
+                    <a
+                      href="https://www.instagram.com/isgs_tech/?igsh=MW1pcWdjZGZpZDMzaQ%3D%3D"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="w-10 h-10 rounded-full bg-isgs-charcoal flex items-center justify-center hover:bg-isgs-graphite transition-colors"
+                    >
+                      <FaInstagram className="text-isgs-smoke" size={16} />
+                    </a>
+                    <p className="text-isgs-silver">Instagram: isgs_tech</p>
                   </div>
-                  
+
                   <div className="flex items-center gap-6 mb-4">
                     <div className="w-10 h-10 rounded-full bg-isgs-charcoal flex items-center justify-center">
                       <FaLinkedin className="text-isgs-smoke" />
                     </div>
                     <p className="text-isgs-silver">LinkedIn: coming soon</p>
                   </div>
-                  
+
                   <div className="flex items-center gap-6">
-                    <div className="w-10 h-10 rounded-full bg-isgs-charcoal flex items-center justify-center">
-                      <FaTwitter className="text-isgs-smoke" />
-                    </div>
-                    <p className="text-isgs-silver">Twitter/X: coming soon</p>
+                    <a
+                      href="https://x.com/ISGS_TECH?t=o2yGn7MtSsB4q_vL4aw8wg&s=09"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="w-10 h-10 rounded-full bg-isgs-charcoal flex items-center justify-center hover:bg-isgs-graphite transition-colors"
+                    >
+                      <FaTwitter className="text-isgs-smoke" size={16} />
+                    </a>
+                    <p className="text-isgs-silver">Twitter/X: ISGS_TECH</p>
                   </div>
                 </div>
               </div>
-              
+
               {/* Additional Call to Action */}
               <div className="mt-10 p-6 border border-isgs-charcoal rounded-lg bg-gradient-to-r from-isgs-dark to-isgs-black">
                 <div className="flex mb-3">
