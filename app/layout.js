@@ -2,6 +2,7 @@ import { Plus_Jakarta_Sans, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import InitialLoader from "@/components/InitialLoader";
 
 const jakartaSans = Plus_Jakarta_Sans({
   variable: "--font-jakarta-sans",
@@ -44,16 +45,17 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className="scroll-smooth">
-       <head>
+      <head>
         <link rel="icon" href="/assets/isgs_logo.png" type="image/png" />
       </head>
       <body
         className={`${jakartaSans.variable} ${geistMono.variable} antialiased`}
       >
         <div className="overflow-x-hidden w-full">
-          <Header/>
+          <InitialLoader />
+          <Header />
           {children}
-          <Footer/>
+          <Footer />
         </div>
       </body>
     </html>

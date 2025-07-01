@@ -78,7 +78,7 @@ function Footer() {
             </ul>
 
             <div className="mt-6">
-              <Link href="/contact">
+              <Link href="https://qodeefront-sxuy.onrender.com/" target="_blank">
                 <button className="px-5 py-2 bg-isgs-white text-isgs-black text-sm font-medium rounded-md hover:bg-isgs-smoke transition-colors">
                   Get a Demo
                 </button>

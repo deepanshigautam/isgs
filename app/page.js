@@ -1,6 +1,6 @@
 'use client';
 
-import HeroSection from "@/components/Home";
+import HeroSection from "@/components/HeroSection";
 
 
 
