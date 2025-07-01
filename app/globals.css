@@ -39,6 +39,18 @@ html, body {
   --color-isgs-snow: #F7F7F7;
   --color-isgs-white: #FFFFFF;
   --color-isgs-accent: #4D4D4D;
+  
+  /* Custom Blue Palette */
+  --color-isgs-blue-900: #1e3a8a;
+  --color-isgs-blue-800: #1e40af;
+  --color-isgs-blue-700: #1d4ed8;
+  --color-isgs-blue-600: #2563eb;
+  --color-isgs-blue-500: #3b82f6;
+  --color-isgs-blue-400: #60a5fa;
+  --color-isgs-blue-300: #93c5fd;
+  --color-isgs-blue-200: #bfdbfe;
+  --color-isgs-blue-100: #dbeafe;
+  --color-isgs-blue-50: #eff6ff;
 
   --font-sans: 'Inter', system-ui, sans-serif;
 }
@@ -107,5 +119,22 @@ html, body {
 
   .button-secondary:hover {
     background-color: var(--color-isgs-dark);
+  }
+
+  /* Custom Blue Utilities */
+  .bg-isgs-blue-gradient {
+    background: linear-gradient(135deg, var(--color-isgs-blue-600), var(--color-isgs-blue-400));
+  }
+
+  .text-isgs-blue-gradient {
+    background: linear-gradient(135deg, var(--color-isgs-blue-400), var(--color-isgs-blue-200));
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+  }
+
+  .border-isgs-blue-glow {
+    border-color: var(--color-isgs-blue-500);
+    box-shadow: 0 0 10px var(--color-isgs-blue-500);
   }
 }
