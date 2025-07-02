@@ -1,5 +1,6 @@
 import React from 'react'
 import { FaPhone } from 'react-icons/fa'
+import Link from 'next/link'
 
 export default function CallToAction() {
   return (
@@ -34,19 +35,21 @@ export default function CallToAction() {
                   </div>
                   
                   <div className="flex flex-wrap justify-center gap-6">
+                    <Link href="./contact"  className="group">
                     <button className="px-8 py-4 bg-blue-500 text-isgs-white font-medium rounded-xl hover:bg-blue-600 transition-all duration-300 shadow-lg shadow-blue-500/20 hover:shadow-blue-500/30 flex items-center gap-3 transform hover:-translate-y-1">
                       <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z" />
                       </svg>
                       Request a Quote
-                    </button>
+                    </button></Link>
                     
+                    <Link href="https://qodeefront-sxuy.onrender.com/" target='_blank' className="group">
                     <button className="px-8 py-4 bg-transparent border border-blue-500/50 text-blue-400 font-medium rounded-xl hover:bg-blue-500/10 transition-all duration-300 flex items-center gap-3 transform hover:-translate-y-1">
                       <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a1.994 1.994 0 01-1.414-.586m0 0L11 14h4a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2v4l.586-.586z" />
                       </svg>
                       Let's Build Together
-                    </button>
+                    </button></Link>
                   </div>
                 </div>
               </div>
