@@ -268,7 +268,7 @@ function Header() {
             <div className="md:hidden">
               <button 
                 onClick={() => setIsMenuOpen(!isMenuOpen)} 
-                className="relative w-10 h-10 rounded-full flex items-center justify-center bg-white/10 backdrop-blur-md border border-white/10"
+                className="relative w-10 h-10 flex items-center justify-center "
                 aria-expanded={isMenuOpen}
                 aria-label="Toggle menu"
               >

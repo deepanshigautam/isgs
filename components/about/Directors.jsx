@@ -13,7 +13,7 @@ export default function Directors() {
               <h2 className="text-3xl md:text-4xl font-bold text-isgs-white">Meet Our Directors</h2>
             </div>
 
-            <div className="grid md:grid-cols-2 gap-20">
+            <div className="grid md:grid-cols-1 gap-20">
               {/* Director 1 */}
               <div className="relative group">
                 {/* Decorative background */}
@@ -48,17 +48,17 @@ export default function Directors() {
               </div>
 
               {/* Director 2 */}
-              <div className="relative group">
-                {/* Decorative background */}
+              {/* <div className="relative group">
+                
                 <div className="absolute -z-10 top-10 left-0 right-0 bottom-0 bg-gradient-to-b from-blue-500/5 to-transparent rounded-3xl"></div>
 
-                {/* Profile card */}
+                
                 <div className="flex flex-col items-center relative z-10">
-                  {/* Image with highlight effect */}
+                  
                   <div className="relative mb-8">
                     <div className="absolute -inset-1.5 bg-gradient-to-br from-blue-500/30 to-transparent rounded-full blur-md opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
                     <div className="relative w-56 h-56 rounded-full overflow-hidden border-2 border-isgs-charcoal">
-                      {/* Director image */}
+                    
                       <Image
                         src="/assets/anumika_new.png"
                         alt="Mrs. Anumika Kumari"
@@ -77,7 +77,7 @@ export default function Directors() {
                     ensures that technology remains human-centered and education-focused.
                   </p>
                 </div>
-              </div>
+              </div> */}
             </div>
           </section>
   )

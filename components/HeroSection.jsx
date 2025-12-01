@@ -92,11 +92,11 @@ function HeroSection() {
   };
 
   return (
-    <div className="bg-isgs-black overflow-hidden w-full">
+    <div className="bg-isgs-black overflow-hidden w-full ">
       {/* Main Hero Section */}
-      <div className="relative w-full min-h-screen flex items-center justify-center px-4 overflow-hidden">
+      <div className="relative w-full min-h-screen flex items-center justify-center px-4 overflow-hidden ">
         {/* Enhanced background elements */}
-        <div className="absolute inset-0">
+        <div className="absolute inset-0 ">
           {/* Animated gradient background */}
           <motion.div
             initial={{ opacity: 0 }}
@@ -184,7 +184,7 @@ function HeroSection() {
           {/* Main heading - keeping original size */}
           <motion.div
             variants={fadeInUp}
-            className="overflow-hidden mb-6"
+            className="overflow-hidden mb-6  lg:mt-0 md:mt-0 mt-12"
           >
             <h1 className="text-6xl md:text-8xl font-extrabold text-isgs-white tracking-tight">
               ISGS

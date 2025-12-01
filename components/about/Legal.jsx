@@ -42,7 +42,7 @@ export default function Legal() {
 
                     <div>
                       <p className="text-isgs-smoke text-sm mb-1">Directors</p>
-                      <p className="text-isgs-white font-medium">Mrs. Anshu Jindal & Mrs. Anumika Kumari</p>
+                      <p className="text-isgs-white font-medium">Mrs. Anshu Jindal </p>
                     </div>
 
                     <div>
